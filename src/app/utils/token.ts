@@ -2,7 +2,7 @@ import tokenAbi from "@/app/abi/TokenABI.json";
 import { ethers } from "ethers";
 
 const mintSALD = async (
-  amount: number,
+  amount: string,
   setCompleted: React.Dispatch<React.SetStateAction<boolean>>
 ) => {
   if (!process.env.NEXT_PUBLIC_SALD_ADDR) {
@@ -22,7 +22,7 @@ const mintSALD = async (
   try {
     await tokenContract.mint(
       signer.getAddress(),
-      ethers.utils.parseUnits(amount.toString(), 18)
+      ethers.utils.parseUnits(amount, 18)
     );
   } catch (error) {
     console.error(error);
