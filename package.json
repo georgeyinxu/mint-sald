@@ -9,9 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.17",
+    "@thirdweb-dev/react": "^3.16.0",
+    "@thirdweb-dev/sdk": "^3.10.62",
+    "ethers": "^5",
+    "next": "latest",
     "react": "latest",
-    "react-dom": "latest",
-    "next": "latest"
+    "react-dom": "latest"
   },
   "devDependencies": {
     "typescript": "latest",
