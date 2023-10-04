@@ -17,7 +17,7 @@ export default function Home() {
 
   useEffect(() => {
     // Check if the user is connected to the wrong network
-    if (isMismatched) {
+    if (isMismatched && switchNetwork) {
       // Prompt their wallet to switch networks
       switchNetwork(ChainId.Mumbai); // the chain you want here
     }
